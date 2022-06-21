@@ -1,0 +1,40 @@
+.container {
+	max-width: 36rem;
+	padding: 0 1rem;
+	margin: 1.5rem auto 6rem;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.customShapeDividerTop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.customShapeDividerTop svg {
+	position: relative;
+	display: block;
+	width: calc(110% + 1.3px);
+	height: 165px;
+	transform: rotateY(180deg);
+}
+
+.customShapeDividerTop .shapeFill {
+	fill: #C69B7B;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.customShapeDividerTop	svg	{
+		width:	calc(169%	+	1.3px);
+		height:	65px;
+	}
+}
