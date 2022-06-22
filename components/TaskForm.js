@@ -18,7 +18,7 @@ export default function TaskForm(props) {
 
         props.onSubmit({
             id: (new Date()).getTime(),
-            text: input,
+            title: input,
             notes: "",
             completed: false
         });

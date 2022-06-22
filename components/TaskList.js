@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Task from "./Task";
 import TaskForm from "./TaskForm";
 
+
 export default function TaskList() {
     const [tasks, setTasks] = useState([]);
     const [status, setStatus] = useState("all");
@@ -26,7 +27,7 @@ export default function TaskList() {
 
     const addTask = (task) => {
         // Ignore if there are only spaces
-        if (!task.text || /^\s*$/.test(task.text)) {
+        if (!task.title || /^\s*$/.test(task.title)) {
             return;
         }
 
@@ -35,6 +36,14 @@ export default function TaskList() {
 
     const removeTask = (id) => {
         setTasks(tasks.filter((task) => task.id !== id))
+    }
+
+    const updateTask = (taskId, updatedTask) => {
+        if (!updatedTask.title || /^\s*$/.test(updatedTask.title)) {
+            return;
+        }
+
+        setTasks((tasks) => tasks.map(task =>(task.id === taskId ? updatedTask : task)))
     }
 
     const changeTaskStatus = (id) => {
@@ -102,12 +111,10 @@ export default function TaskList() {
                 {filteredTasks.map(task => (
                     <Task
                         key={task.id}
-                        id={task.id}
-                        text={task.text}
-                        notes={task.notes}
-                        completed={task.completed}
+                        task={task}
                         removeTask={removeTask}
                         changeTaskStatus={changeTaskStatus}
+                        updateTask={updateTask}
                     />
                 ))}
             </div>
