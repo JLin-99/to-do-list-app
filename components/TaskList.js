@@ -7,6 +7,23 @@ export default function TaskList() {
     const [status, setStatus] = useState("all");
     const [filteredTasks, setFilteredTasks] = useState([]);
 
+    useEffect(() => {
+        getLocalTasks();
+    }, []);
+
+    const getLocalTasks = () => {
+        if (localStorage.getItem("tasks") === null) {
+            localStorage.setItem("tasks", JSON.stringify([]));
+        } else {
+            let tasksLocal = JSON.parse(localStorage.getItem("tasks"));
+            setTasks(tasksLocal);
+        }
+    }
+
+    const saveLocalTasks = () => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+
     const addTask = (task) => {
         // Ignore if there are only spaces
         if (!task.text || /^\s*$/.test(task.text)) {
@@ -20,7 +37,7 @@ export default function TaskList() {
         setTasks(tasks.filter((task) => task.id !== id))
     }
 
-    const completeTask = (id) => {
+    const changeTaskStatus = (id) => {
         setTasks(tasks.map((task) => {
             if (task.id === id) {
                 return {
@@ -53,6 +70,10 @@ export default function TaskList() {
     useEffect(() => {
         filterTasks();
     }, [tasks, status]);
+
+    useEffect(() => {
+        saveLocalTasks();
+    }, [tasks]);
     
     return (
         <div>
@@ -86,7 +107,7 @@ export default function TaskList() {
                         notes={task.notes}
                         completed={task.completed}
                         removeTask={removeTask}
-                        completeTask={completeTask}
+                        changeTaskStatus={changeTaskStatus}
                     />
                 ))}
             </div>
