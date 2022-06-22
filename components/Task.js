@@ -6,6 +6,7 @@ export default function Task({ id, text, notes, completed, removeTask, completeT
     return (
         <div className={`task-wrapper ${completed ? styles.completed : ""}`}>
             <div className="left-control">
+                <input type="checkbox" onClick={() => completeTask(id)}></input>
                 <div className="task-control" onClick={() => completeTask(id)}>t</div>
             </div>
             <div className="task-content">
