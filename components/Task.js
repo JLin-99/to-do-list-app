@@ -1,10 +1,12 @@
 import { RiEdit2Fill, RiDeleteBack2Fill } from "react-icons/ri"
+import styles from '../styles/task.module.css';
 
-export default function Task({ text, notes }) {
+export default function Task({ id, text, notes, completed, removeTask, completeTask }) {
+
     return (
-        <div className="task-wrapper">
+        <div className={`task-wrapper ${completed ? styles.completed : ""}`}>
             <div className="left-control">
-                <div className="task-control"></div>
+                <div className="task-control" onClick={() => completeTask(id)}>t</div>
             </div>
             <div className="task-content">
                 <div className="task-body">
@@ -12,8 +14,11 @@ export default function Task({ text, notes }) {
                     <div className="task-notes">{notes}</div>
                 </div>
                 <div className="icons">
-                    <RiEdit2Fill />
-                    <RiDeleteBack2Fill />
+                    <RiEdit2Fill
+                    />
+                    <RiDeleteBack2Fill
+                        onClick={() => removeTask(id)}
+                    />
                 </div>
             </div>
         </div>
