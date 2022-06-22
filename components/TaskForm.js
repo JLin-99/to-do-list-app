@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-export default function TaskForm() {
+export default function TaskForm(props) {
     const [input, setInput] = useState("");
 
     const inputRef = useRef(null)
@@ -15,6 +15,13 @@ export default function TaskForm() {
 
     const handleTaskSubmit = (e) => {
         e.preventDefault();
+
+        props.onSubmit({
+            id: (new Date()).getTime(),
+            text: input,
+            notes: "",
+            completed: false
+        });
 
         setInput("");
     }

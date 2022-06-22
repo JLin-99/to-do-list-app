@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/Layout"
-import TaskForm from "../components/TaskForm";
 import TaskList from "../components/TaskList";
 
 function HomePage() {
@@ -9,7 +8,7 @@ function HomePage() {
             <Head>
                 <title>siteTitle</title>
             </Head>
-            <TaskForm />
+            <TaskList />
         </Layout>
     )
 }

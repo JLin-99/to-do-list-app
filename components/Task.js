@@ -1,6 +1,6 @@
 import { RiEdit2Fill, RiDeleteBack2Fill } from "react-icons/ri"
 
-export default function Task() {
+export default function Task({ text, notes }) {
     return (
         <div className="task-wrapper">
             <div className="left-control">
@@ -8,8 +8,8 @@ export default function Task() {
             </div>
             <div className="task-content">
                 <div className="task-body">
-                    <div className="task-title">Hacer algo</div>
-                    <div className="task-notes">...</div>
+                    <div className="task-title">{text}</div>
+                    <div className="task-notes">{notes}</div>
                 </div>
                 <div className="icons">
                     <RiEdit2Fill />
