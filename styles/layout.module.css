@@ -1,14 +1,14 @@
 .container {
 	max-width: 30rem;
 	padding: 0 1rem;
-	margin: 1.5rem auto 6rem;
+	margin: 0rem auto 6rem;
 }
 
 .header {
 	display: flex;
-	/* flex-direction: column; */
-	align-items: flex-end;
+	align-items: center;
 	justify-content: space-evenly;
+	margin-bottom: 0.5rem;
 }
 
 .customShapeDividerTop {

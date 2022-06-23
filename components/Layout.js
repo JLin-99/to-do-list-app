@@ -40,7 +40,7 @@ export default function Layout({ children }) {
 					/>
 
 					<h2 className={utilStyles.headingX1}>
-						Plan. Do. Check. Act.
+						Plan.<br/>Do. Check. Adjust.
 					</h2>
 				</header>
 				<main>{children}</main>

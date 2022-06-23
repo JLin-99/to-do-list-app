@@ -19,7 +19,7 @@
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     min-height: 90vh;
-    margin-top: -0.5%;
+    margin-top: -0.2%;
     border-style: solid;
     border-color: #3A3845;
     border-width: 1px;
@@ -33,10 +33,15 @@
 }
 
 .headingLg {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.4;
     width: 50%;
     margin: 0;
+
+    position: absolute;
+    min-width: 15%;
+    width: auto;
+    top: 0.7rem;
 }
 
 .statusTabs {

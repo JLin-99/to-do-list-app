@@ -97,14 +97,14 @@ export default function TaskList() {
                         name="statusTab"
                         value="completed">
                     </input>
-                    <label htmlFor="tabCompleted">Completed</label>
+                    <label htmlFor="tabCompleted">Complete</label>
                     <input
                         type="radio"
                         id="tabUncompleted"
                         name="statusTab"
                         value="uncompleted">
                     </input>
-                    <label htmlFor="tabUncompleted">Uncompleted</label>
+                    <label htmlFor="tabUncompleted">Active</label>
 
                     <input
                         type="radio"
