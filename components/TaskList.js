@@ -4,7 +4,7 @@ import TaskForm from "./TaskForm";
 import style from "../styles/tasklist.module.css"
 
 
-export default function TaskList() {
+export default function TaskList({defaultTasks}) {
     const [tasks, setTasks] = useState([]);
     const [status, setStatus] = useState("all");
     const [filteredTasks, setFilteredTasks] = useState([]);
@@ -14,10 +14,13 @@ export default function TaskList() {
     }, []);
 
     const getLocalTasks = () => {
+        console.log(localStorage.getItem("tasks"))
         if (localStorage.getItem("tasks") === null) {
-            localStorage.setItem("tasks", JSON.stringify([]));
+            setTasks(defaultTasks);
         } else {
             let tasksLocal = JSON.parse(localStorage.getItem("tasks"));
+            console.log("ya hgay datos");
+            console.log(tasksLocal);
             setTasks(tasksLocal);
         }
     }

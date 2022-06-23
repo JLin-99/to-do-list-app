@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "title": "Task example",
+        "notes": "Notes for Task example",
+        "completed": false
+    },
+    {
+        "id": 2,
+        "title": "Check In",
+        "notes": "---\n### Welcome :)\n\n\"Remember the to-do list but don't forget the to-be list.\"\n- __Plan__ - Develop an Action plan (Create your Tasks)\n- __Do__ - Implement Solutions (Complete your Tasks)\n- __Check__ - Validate the Results\n- __Adjust__ - Make necessary Adjustments (Improve your Life and repeat)\n\nHope you enjoy!\n\n---",
+        "completed": false
+    },
+    {
+        "id": 3,
+        "title": "Completed Task",
+        "notes": "Task notes here.\n\n![Get It Done](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRKWIR_i0iu8BHq2ESDR2tSHA1imCF72DSuw&usqp=CAU)\n\n---",
+        "completed": true
+    }
+    
+]
