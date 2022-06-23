@@ -8,11 +8,9 @@ body {
 	font-size: 1rem;
 	background-color: #ece0d1;
 	color: #3A3845;
-	background: linear-gradient(
-		180deg,
-		#ece0d1 0%,
-		#c69b7b 100%
-	);
+	background: linear-gradient(180deg,
+			#ece0d1 0%,
+			#c69b7b 100%);
 	background-attachment: fixed;
 }
 

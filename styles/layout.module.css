@@ -34,8 +34,8 @@
 
 /** For tablet devices **/
 @media (min-width: 768px) and (max-width: 1023px) {
-	.customShapeDividerTop	svg	{
-		width:	calc(169%	+	1.3px);
-		height:	65px;
+	.customShapeDividerTop svg {
+		width: calc(169% + 1.3px);
+		height: 65px;
 	}
 }

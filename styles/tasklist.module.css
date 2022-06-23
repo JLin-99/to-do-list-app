@@ -55,7 +55,7 @@
     display: none;
 }
 
-.statusTabs input[type="radio"]:checked + label {
+.statusTabs input[type="radio"]:checked+label {
     background: #DEB6AB;
     border-color: #3A3845;
     border-bottom: 0;
@@ -82,6 +82,6 @@
     border-color: #6d4d35;
 }
 
-.statusTabs input[type="radio"]:hover + label {
+.statusTabs input[type="radio"]:hover+label {
     color: #8E3200;
 }

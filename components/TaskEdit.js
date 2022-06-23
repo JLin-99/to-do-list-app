@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { RiCloseCircleFill, RiDeleteBin5Fill } from "react-icons/ri";
-import { MdSaveAlt } from "react-icons/md"
+import { MdSaveAlt } from "react-icons/md";
 import styles from "../styles/taskedit.module.css";
 
 export default function TaskEdit({ trigger, task, setTrigger, updateTask, removeTask }) {
@@ -78,7 +78,7 @@ export default function TaskEdit({ trigger, task, setTrigger, updateTask, remove
                         <button
                             className={styles.flexBtn}
                             onClick={handleEditSubmit}>
-                            <MdSaveAlt className={styles.iconBtn}/>&nbsp;&nbsp;Save
+                            <MdSaveAlt className={styles.iconBtn} />&nbsp;&nbsp;Save
                         </button>
                     </div>
                     <div className={styles.fRight}>
@@ -88,7 +88,7 @@ export default function TaskEdit({ trigger, task, setTrigger, updateTask, remove
                             <RiDeleteBin5Fill />
                         </button>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

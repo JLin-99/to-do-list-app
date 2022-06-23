@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/layout.module.css';
-import utilStyles from '../styles/utils.module.css';
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/layout.module.css";
+import utilStyles from "../styles/utils.module.css";
 
-export const siteTitle = 'To Do List - AvoidingCoffee';
+export const siteTitle = "To Do List - AvoidingCoffee";
 
 export default function Layout({ children }) {
 	return (
@@ -40,7 +40,7 @@ export default function Layout({ children }) {
 					/>
 
 					<h2 className={utilStyles.headingX1}>
-						Plan.<br/>Do. Check. Adjust.
+						Plan.<br />Do. Check. Adjust.
 					</h2>
 				</header>
 				<main>{children}</main>

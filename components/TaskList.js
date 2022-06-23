@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import Task from "./Task";
 import TaskForm from "./TaskForm";
-import style from "../styles/tasklist.module.css"
+import style from "../styles/tasklist.module.css";
 
 
-export default function TaskList({defaultTasks}) {
+export default function TaskList({ defaultTasks }) {
     const [tasks, setTasks] = useState([]);
-    const [status, setStatus] = useState("all");
+    const [filterType, setFilterType] = useState("all");
     const [filteredTasks, setFilteredTasks] = useState([]);
 
     useEffect(() => {
@@ -14,13 +14,10 @@ export default function TaskList({defaultTasks}) {
     }, []);
 
     const getLocalTasks = () => {
-        console.log(localStorage.getItem("tasks"))
         if (localStorage.getItem("tasks") === null) {
             setTasks(defaultTasks);
         } else {
             let tasksLocal = JSON.parse(localStorage.getItem("tasks"));
-            console.log("ya hgay datos");
-            console.log(tasksLocal);
             setTasks(tasksLocal);
         }
     }
@@ -39,7 +36,7 @@ export default function TaskList({defaultTasks}) {
     }
 
     const removeTask = (id) => {
-        setTasks(tasks.filter((task) => task.id !== id))
+        setTasks(tasks.filter((task) => task.id !== id));
     }
 
     const updateTask = (taskId, updatedTask) => {
@@ -47,7 +44,7 @@ export default function TaskList({defaultTasks}) {
             return;
         }
 
-        setTasks((tasks) => tasks.map(task => (task.id === taskId ? updatedTask : task)))
+        setTasks((tasks) => tasks.map(task => (task.id === taskId ? updatedTask : task)));
     }
 
     const changeTaskStatus = (id) => {
@@ -62,13 +59,12 @@ export default function TaskList({defaultTasks}) {
         }))
     }
 
-    const handleStatus = (e) => {
-        console.log(e.target.value);
-        setStatus(e.target.value);
+    const handleListStatus = (e) => {
+        setFilterType(e.target.value);
     }
 
     const filterTasks = () => {
-        switch (status) {
+        switch (filterType) {
             case "completed":
                 setFilteredTasks(tasks.filter((task) => task.completed));
                 break;
@@ -83,7 +79,7 @@ export default function TaskList({defaultTasks}) {
 
     useEffect(() => {
         filterTasks();
-    }, [tasks, status]);
+    }, [tasks, filterType]);
 
     useEffect(() => {
         saveLocalTasks();
@@ -93,7 +89,7 @@ export default function TaskList({defaultTasks}) {
         <div className={style.container}>
             <div className={style.heading}>
                 <h2 className={style.headingLg}>To Do's</h2>
-                <div className={style.statusTabs} onChange={handleStatus}>
+                <div className={style.statusTabs} onChange={handleListStatus}>
                     <input
                         type="radio"
                         id="tabCompleted"
@@ -120,7 +116,7 @@ export default function TaskList({defaultTasks}) {
                 </div>
             </div>
             <div className={style.listContainer}>
-                <TaskForm onSubmit={addTask}/>
+                <TaskForm onSubmit={addTask} />
                 <div>
                     {filteredTasks.map(task => (
                         <Task

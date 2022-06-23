@@ -8,10 +8,7 @@
     margin-bottom: 0.15rem;
 }
 
-.taskWrapper:hover .leftControl {
-    border-color: #6d4d35;
-}
-
+.taskWrapper:hover .leftControl,
 .taskWrapper:hover .taskContent {
     border-color: #6d4d35;
 }
@@ -57,10 +54,7 @@
     display: none;
 }
 
-.taskControl:hover .checkBtn {
-    display: block;
-}
-
+.taskControl:hover .checkBtn,
 .taskControl .checkBtn.check {
     display: block;
 }

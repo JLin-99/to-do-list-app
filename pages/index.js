@@ -9,7 +9,7 @@ function HomePage() {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <TaskList defaultTasks={defaultTasks}/>
+            <TaskList defaultTasks={defaultTasks} />
         </Layout>
     )
 }

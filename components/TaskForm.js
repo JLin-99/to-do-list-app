@@ -1,15 +1,14 @@
 import { useState, useEffect, useRef } from "react";
-import styles from "../styles/taskedit.module.css"
-import { RiAddCircleFill } from "react-icons/ri"
-import { AiOutlineEnter } from "react-icons/ai"
+import styles from "../styles/taskedit.module.css";
+import { AiOutlineEnter } from "react-icons/ai";
 
-export default function TaskForm(props) {
+export default function TaskForm({ onSubmit }) {
     const [input, setInput] = useState("");
 
-    const inputRef = useRef(null)
+    const inputRef = useRef(null);
 
     useEffect(() => {
-        inputRef.current.focus()
+        inputRef.current.focus();
     })
 
     const handleChange = (e) => {
@@ -19,7 +18,7 @@ export default function TaskForm(props) {
     const handleTaskSubmit = (e) => {
         e.preventDefault();
 
-        props.onSubmit({
+        onSubmit({
             id: (new Date()).getTime(),
             title: input,
             notes: "",

@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Task example",
-        "notes": "Notes for Task example",
+        "notes": "Notes for Task example.\nYou can use basic __markdown__ formatting",
         "completed": false
     },
     {
@@ -17,5 +17,4 @@
         "notes": "Task notes here.\n\n![Get It Done](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRKWIR_i0iu8BHq2ESDR2tSHA1imCF72DSuw&usqp=CAU)\n\n---",
         "completed": true
     }
-    
 ]

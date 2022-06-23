@@ -7,7 +7,7 @@
     background-color: #3A3845AA;
     border: none;
     padding: 0;
-    
+
 
     display: flex;
     justify-content: center;
@@ -44,12 +44,12 @@
     align-items: center;
 }
 
-.heading h2{
+.heading h2 {
     margin-bottom: 1rem;
     margin-top: 0%;
 }
 
-.heading button{
+.heading button {
     margin-left: auto;
     margin-bottom: auto;
     color: #3A3845;
@@ -74,18 +74,12 @@
     border: 1px solid #3a38453d;
 }
 
+.formControl:hover,
 .formControl:focus-within {
     background-color: #F3F4ED;
 
     border-color: #8E3200;
 }
-
-.formControl:hover {
-    background-color: #F3F4ED;
-
-    border-color: #8E3200;
-}
-
 
 .formControl:focus {
     background-color: #F3F4ED;
@@ -116,7 +110,7 @@ textarea.formControl {
     align-items: center;
 }
 
-.fRight button{
+.fRight button {
     margin-left: auto;
     color: #3A3845;
     font-size: 1.5rem;

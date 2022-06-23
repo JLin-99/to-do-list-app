@@ -1,9 +1,8 @@
 import { RiEdit2Fill, RiCheckLine, RiDeleteBin5Fill } from "react-icons/ri"
 import { useState } from "react";
-import styles from '../styles/task.module.css';
+import styles from "../styles/task.module.css";
 import TaskEdit from "./TaskEdit";
 import ReactMarkdown from "react-markdown";
-import { MdSystemSecurityUpdate } from "react-icons/md";
 
 export default function Task({ task, removeTask, changeTaskStatus, updateTask }) {
     const [openEdit, setOpenEdit] = useState(false);
