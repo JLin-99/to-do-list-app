@@ -55,7 +55,7 @@
 }
 
 .formGroup {
-    margin-bottom: .3rem;
+    margin-bottom: .75rem;
 }
 
 .formGroup div {
@@ -120,4 +120,8 @@ textarea.formControl {
 .label {
     font-size: .8rem;
     font-weight: bold;
+}
+
+.mb1 {
+    margin-bottom: 1rem;
 }

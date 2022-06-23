@@ -16,6 +16,8 @@
     width: 100%;
     background-color: #DEB6AB;
     border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     min-height: 90vh;
     margin-top: -0.5%;
     border-style: solid;

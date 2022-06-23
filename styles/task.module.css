@@ -2,3 +2,148 @@
     text-decoration: line-through;
     opacity: 0.5;
 }
+
+.taskWrapper {
+    display: flex;
+    margin-bottom: 0.15rem;
+}
+
+.taskWrapper:hover .leftControl{
+    border-color: #6d4d35;
+}
+
+.taskWrapper:hover .taskContent{
+    border-color: #6d4d35;
+}
+
+.leftControl {
+    display: flex;
+    justify-content: center;
+    background-color: #6d4d35;
+    border: 2px solid transparent;
+    min-height: 60px;
+    min-width: 35px;
+    width: 10%;
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+    border-right: none;
+    flex-shrink: 0;
+}
+
+.completed .leftControl {
+    background-color: #536162;
+}
+
+.taskControl {
+    margin-top: 35%;
+    background-color: #ece0d170;
+    width: 25px;
+    height: 25px;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    text-align: center;
+    position: center;
+}
+
+.taskControl:hover {
+    background-color: #ece0d190;
+}
+
+.taskControl .checkBtn {
+    margin-top: 20%;
+    margin-left: 20%;
+    color: #1C0A00;
+    font-size: 1rem;
+    display: none;
+}
+
+.taskControl:hover .checkBtn{
+    display: block;
+}
+
+.taskControl .checkBtn.check {
+    display: block;
+}
+
+.taskContent {
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    background-color: #ece5dc;
+    border: 2px solid transparent;
+    border-left: none;
+    position: relative;
+    width: 90%;
+}
+
+.taskClickable {
+    padding: .8rem 1rem 0 1rem;
+    cursor: pointer;
+}
+
+.taskTitle {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    line-height: 1.2;
+    font-weight: 501;
+    word-break: break-word;
+    overflow: break-word;
+}
+
+.taskNotes {
+    font-size: 0.87rem;
+    color: #4B6587;
+    padding-right: 2rem;
+    min-width: 0;
+    word-break: break-word;
+    overflow: break-word;
+    margin-top: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.fGroup3 {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.fLeft,
+.fRight {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.fRight button {
+    margin-left: auto;
+    color: #3A3845;
+    font-size: 1.5rem;
+    padding: 0%;
+    box-sizing: content-box;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-right: 1rem;
+}
+
+.fRight button:hover {
+    color: #8E3200;
+}
+
+.fCenter {
+    display: flex;
+    align-items: center;
+}
+
+.iconBtn {
+    color: #3A3845;
+    font-size: 1.5rem;
+    padding: 0%;
+    box-sizing: content-box;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.iconBtn:hover {
+    color: #8E3200;
+}

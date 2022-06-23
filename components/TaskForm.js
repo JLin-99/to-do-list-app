@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import styles from "../styles/taskedit.module.css"
 
 export default function TaskForm(props) {
     const [input, setInput] = useState("");
@@ -29,6 +30,7 @@ export default function TaskForm(props) {
     return (
         <form onSubmit={handleTaskSubmit}>
             <input
+                className={`${styles.formControl} ${styles.mb1}`}
                 type="text"
                 onChange={handleChange}
                 value={input}

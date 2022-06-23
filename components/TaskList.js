@@ -117,7 +117,7 @@ export default function TaskList() {
                 </div>
             </div>
             <div className={style.listContainer}>
-                <TaskForm onSubmit={addTask} />
+                <TaskForm onSubmit={addTask}/>
                 <div>
                     {filteredTasks.map(task => (
                         <Task

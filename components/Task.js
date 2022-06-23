@@ -1,4 +1,4 @@
-import { RiEdit2Fill, RiDeleteBack2Fill, RiCheckboxFill, RiCheckboxBlankLine } from "react-icons/ri"
+import { RiEdit2Fill, RiCheckLine, RiDeleteBin5Fill } from "react-icons/ri"
 import { useState } from "react";
 import styles from '../styles/task.module.css';
 import TaskEdit from "./TaskEdit";
@@ -8,29 +8,39 @@ export default function Task({ task, removeTask, changeTaskStatus, updateTask })
 
     return (
         <>
-            <div className={`task-wrapper ${task.completed ? styles.completed : ""}`}>
-                <div className="left-control">
-                    <div className="task-control" onClick={() => changeTaskStatus(task.id)}>
-                        {task.completed ? (
-                            <RiCheckboxFill />
-                        ) : (
-                            <RiCheckboxBlankLine />
-                        )
-                        }
+            <div className={`${styles.taskWrapper} ${task.completed ? styles.completed : ""}`}>
+                <div className={styles.leftControl}>
+                    <div className={styles.taskControl} onClick={() => changeTaskStatus(task.id)}>
+                        <RiCheckLine
+                            className={`${styles.checkBtn} ${task.completed ? styles.check : ""}`} />
                     </div>
                 </div>
-                <div className="task-content">
-                    <div className="task-body" onClick={() => setOpenEdit(true)}>
-                        <div className="task-title">{task.title}</div>
-                        <div className="task-notes">{task.notes}</div>
+                <div className={styles.taskContent}>
+                    <div className={styles.taskClickable} onClick={() => setOpenEdit(true)}>
+                        <h3 className={styles.taskTitle}>{task.title}</h3>
+                        {task.notes ? (
+                            <p className={styles.taskNotes}>{task.notes}</p>
+                        ) : (<></>)}
+
                     </div>
-                    <div className="icons">
-                        <RiEdit2Fill
-                            onClick={() => setOpenEdit(true)}
-                        />
-                        <RiDeleteBack2Fill
-                            onClick={() => removeTask(task.id)}
-                        />
+
+                    <div className={styles.fGroup3}>
+                        <div className={styles.fLeft}></div>
+
+                        <div className={styles.fCenter}>
+                            <button
+                                className={styles.iconBtn}
+                                onClick={() => setOpenEdit(true)}>
+                                <RiEdit2Fill />
+                            </button>
+                        </div>
+                        <div className={styles.fRight}>
+                            <button
+                                onClick={() => removeTask(task.id)}>
+                                <RiDeleteBin5Fill />
+                            </button>
+                        </div>
+
                     </div>
                 </div>
 
