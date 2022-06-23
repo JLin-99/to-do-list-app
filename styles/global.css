@@ -36,3 +36,27 @@ img {
 	max-width: 100%;
 	display: block;
 }
+
+h1 {
+	font-size: 1rem;
+}
+
+h2 {
+	font-size: .95rem;
+}
+
+h3 {
+	font-size: .90rem;
+}
+
+h4 {
+	font-size: .85rem;
+}
+
+h5 {
+	font-size: .80rem;
+}
+
+h6 {
+	font-size: .75rem;
+}
