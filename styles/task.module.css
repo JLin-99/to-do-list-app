@@ -90,7 +90,7 @@
     overflow: break-word;
 }
 
-.taskNotes {
+.taskNotes {  
     font-size: 0.87rem;
     color: #4B6587;
     padding-right: 2rem;
@@ -99,6 +99,8 @@
     overflow: break-word;
     margin-top: 0.5rem;
     margin-bottom: 0.4rem;
+    white-space: pre-line;
+    line-height: .95rem;
 }
 
 .fGroup3 {

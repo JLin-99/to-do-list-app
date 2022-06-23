@@ -73,7 +73,7 @@ export default function TaskEdit({ trigger, task, setTrigger, updateTask, remove
                 </div>
                 <div className={styles.fGroup3}>
                     <div className={styles.fLeft}></div>
-                    
+
                     <div className={styles.fCenter}>
                         <button
                             className={styles.flexBtn}
