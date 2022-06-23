@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Task from "./Task";
 import TaskForm from "./TaskForm";
+import style from "../styles/tasklist.module.css"
 
 
 export default function TaskList() {
@@ -43,7 +44,7 @@ export default function TaskList() {
             return;
         }
 
-        setTasks((tasks) => tasks.map(task =>(task.id === taskId ? updatedTask : task)))
+        setTasks((tasks) => tasks.map(task => (task.id === taskId ? updatedTask : task)))
     }
 
     const changeTaskStatus = (id) => {
@@ -59,6 +60,7 @@ export default function TaskList() {
     }
 
     const handleStatus = (e) => {
+        console.log(e.target.value);
         setStatus(e.target.value);
     }
 
@@ -83,40 +85,50 @@ export default function TaskList() {
     useEffect(() => {
         saveLocalTasks();
     }, [tasks]);
-    
+
     return (
-        <div>
-            <div>
-                <h2>To Do's</h2>
-                <div className="btn-group" role="group" onClick={handleStatus}>
-                    <button
-                        type="button"
-                        className="btn btn-primary"
-                        value="all"
-                    >All</button>
-                    <button
-                        type="button"
-                        className="btn btn-primary"
-                        value="uncompleted"
-                    >Uncompleted</button>
-                    <button
-                        type="button"
-                        className="btn btn-primary"
-                        value="completed"
-                    >Completed</button>
+        <div className={style.container}>
+            <div className={style.heading}>
+                <h2 className={style.headingLg}>To Do's</h2>
+                <div className={style.statusTabs} onChange={handleStatus}>
+                    <input
+                        type="radio"
+                        id="tabCompleted"
+                        name="statusTab"
+                        value="completed">
+                    </input>
+                    <label htmlFor="tabCompleted">Completed</label>
+                    <input
+                        type="radio"
+                        id="tabUncompleted"
+                        name="statusTab"
+                        value="uncompleted">
+                    </input>
+                    <label htmlFor="tabUncompleted">Uncompleted</label>
+
+                    <input
+                        type="radio"
+                        id="tabAll"
+                        name="statusTab"
+                        defaultChecked
+                        value="all">
+                    </input>
+                    <label htmlFor="tabAll">All</label>
                 </div>
             </div>
-            <TaskForm onSubmit={addTask} />
-            <div>
-                {filteredTasks.map(task => (
-                    <Task
-                        key={task.id}
-                        task={task}
-                        removeTask={removeTask}
-                        changeTaskStatus={changeTaskStatus}
-                        updateTask={updateTask}
-                    />
-                ))}
+            <div className={style.listContainer}>
+                <TaskForm onSubmit={addTask} />
+                <div>
+                    {filteredTasks.map(task => (
+                        <Task
+                            key={task.id}
+                            task={task}
+                            removeTask={removeTask}
+                            changeTaskStatus={changeTaskStatus}
+                            updateTask={updateTask}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )

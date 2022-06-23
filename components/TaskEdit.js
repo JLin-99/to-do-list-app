@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { RiCloseCircleFill, RiDeleteBin5Fill } from 'react-icons/ri';
-import { MdSaveAlt } from 'react-icons/md'
-import styles from '../styles/taskedit.module.css';
+import { useState } from "react";
+import { RiCloseCircleFill, RiDeleteBin5Fill } from "react-icons/ri";
+import { MdSaveAlt } from "react-icons/md"
+import styles from "../styles/taskedit.module.css";
 
 export default function TaskEdit({ trigger, task, setTrigger, updateTask, removeTask }) {
     const [editInput, setEditInput] = useState({
@@ -87,8 +87,6 @@ export default function TaskEdit({ trigger, task, setTrigger, updateTask, remove
                             <RiDeleteBin5Fill />
                         </button>
                     </div>
-                    
-                    
                     
                 </div>
             </div>
