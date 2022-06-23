@@ -33,13 +33,13 @@ export default function Layout({ children }) {
 				<header className={styles.header}>
 					<Image
 						priority
-						src="/images/coffee.gif"
+						src="/images/coffee2.gif"
 						className={utilStyles.borderCircle}
 						height={108}
 						width={108}
 					/>
 
-					<h2 className={utilStyles.headingLg}>
+					<h2 className={utilStyles.headingX1}>
 						Plan. Do. Check. Act.
 					</h2>
 				</header>
