@@ -57,6 +57,7 @@
     z-index: 2;
     height: auto;
     margin-bottom: -0.1%;
+    color: #8E3200;
 }
 
 .statusTabs label {
@@ -76,3 +77,6 @@
     border-color: #6d4d35;
 }
 
+.statusTabs input[type="radio"]:hover + label {
+    color: #8E3200;
+}

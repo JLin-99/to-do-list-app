@@ -68,6 +68,15 @@
     border-radius: 1rem;
     color: #3A3845;
     width: 100%;
+    background-color: #F3F4EDCC;
+}
+
+.formControl:hover {
+    background-color: #F3F4ED;
+}
+
+.formControl:focus {
+    background-color: #F3F4ED;
 }
 
 textarea.formControl {
