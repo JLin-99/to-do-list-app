@@ -6,7 +6,7 @@
     border-radius: 1rem;
     min-height: 90vh;
     border-style: solid;
-    border-color: #3A3845;
+    border-color: #3A384550;
     border-width: 1px;
 }
 
@@ -21,7 +21,7 @@
     min-height: 90vh;
     margin-top: -0.2%;
     border-style: solid;
-    border-color: #3A3845;
+    border-color: #3A384550;
     border-width: 1px;
 }
 
@@ -57,7 +57,7 @@
 
 .statusTabs input[type="radio"]:checked+label {
     background: #DEB6AB;
-    border-color: #3A3845;
+    border-color: #3A384550;
     border-bottom: 0;
     z-index: 2;
     height: auto;
@@ -79,7 +79,7 @@
     border-width: 1px;
     border-bottom: 0;
     border-style: solid;
-    border-color: #6d4d35;
+    border-color: #6d4d3550;
 }
 
 .statusTabs input[type="radio"]:hover+label {

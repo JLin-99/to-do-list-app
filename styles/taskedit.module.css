@@ -23,7 +23,7 @@
     max-width: 400px;
     background-color: #ece0d1;
     border-radius: 1rem;
-    border: 3px solid #6d4d35;
+    border: 3px solid #6d4d3550;
 }
 
 .iconBtn {
@@ -71,14 +71,14 @@
     width: 100%;
     background-color: #F3F4EDCC;
 
-    border: 1px solid #3a38453d;
+    border: 1px solid #3a384550;
 }
 
 .formControl:hover,
 .formControl:focus-within {
     background-color: #F3F4ED;
 
-    border-color: #8E3200;
+    border-color: #8E3200AA;
 }
 
 .formControl:focus {
