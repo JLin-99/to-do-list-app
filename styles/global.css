@@ -4,8 +4,10 @@ body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 		Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: 'Courier New', Courier, monospace;
 	line-height: 1.6;
-	font-size: 18px;
+	word-spacing: -50%;
+	font-size: 1rem;
 	background-color: #ece0d1;
 	color: #3A3845;
 	background: linear-gradient(

@@ -4,24 +4,120 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #3A384577;
+    border: none;
+    padding: 0;
+    
 
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
+    overflow: auto;
 }
 
 .popupInner {
     position: relative;
-    padding: 32px;
+    padding: 1rem;
     width: 100%;
-    max-width: 640px;
-    background-color: #fff;
+    max-width: 400px;
+    background-color: #ece0d1;
+    border-radius: 1rem;
 }
 
-.popupInner .closeBtn {
-    position:absolute;
-    top: 16px;
-    right: 16px;
+.popupInner .iconBtn {
+    font-size: 1.5rem;
+    padding: 0%;
+    box-sizing: content-box;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.popupInner .iconBtn:hover {
+    color: #8E3200;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+}
+
+.heading h2{
+    margin-bottom: 1rem;
+    margin-top: 0%;
+}
+
+.heading button{
+    margin-left: auto;
+    margin-bottom: auto;
+    color: #3A3845;
+}
+
+.formGroup {
+    margin-bottom: .3rem;
+}
+
+.formGroup div {
+    display: flex;
+}
+
+.formControl {
+    padding: 0.25rem 0.75rem;
+    line-height: 1rem;
+    border-radius: 1rem;
+    color: #3A3845;
+    width: 100%;
+}
+
+textarea.formControl {
+    height: 5rem;
+    max-width: 100%;
+}
+
+.fGroup3 {
+    display: flex;
+}
+
+.fLeft,
+.fRight {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.fRight button{
+    margin-left: auto;
+    color: #3A3845;
+    font-size: 1.5rem;
+    padding: 0%;
+    box-sizing: content-box;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.fCenter {
+    display: flex;
+    align-items: center;
+}
+
+.flexBtn {
+    font-size: .8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    box-sizing: content-box;
+}
+
+.flexBtn:hover {
+    color: #8E3200;
+}
+
+.label {
+    font-size: .8rem;
+    font-weight: bold;
 }
