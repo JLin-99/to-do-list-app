@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "../styles/taskedit.module.css"
+import { RiAddCircleFill } from "react-icons/ri"
+import { AiOutlineEnter } from "react-icons/ai"
 
 export default function TaskForm(props) {
     const [input, setInput] = useState("");
@@ -28,14 +30,19 @@ export default function TaskForm(props) {
     }
 
     return (
-        <form onSubmit={handleTaskSubmit}>
+        <form onSubmit={handleTaskSubmit}
+            className={`${styles.formControl}
+                ${styles.mb1} ${styles.formBox}`}>
             <input
-                className={`${styles.formControl} ${styles.mb1}`}
                 type="text"
+                placeholder="Add a To Do"
                 onChange={handleChange}
                 value={input}
                 ref={inputRef}
             />
+            <button className={styles.iconBtn}>
+                <AiOutlineEnter />
+            </button>
         </form>
     )
 }
