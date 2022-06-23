@@ -6,6 +6,7 @@
 .taskWrapper {
     display: flex;
     margin-bottom: 0.15rem;
+    box-shadow: 0px 1px 3px #3a3845;
 }
 
 .taskWrapper:hover .leftControl,
